@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Origin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="static/img/logo/yellow.png" />
+
+</head>
+
+<body id="page-top" class="index">
+    <div class="loader"></div>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img class="logo-size" src="static/img/logo/yellow.png"></a>
+                <a class="navbar-brand page-scroll" href="#page-top">Origin</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#upload">Upload Logo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#dataset">Data Set</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#author">Author</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Loader -->
+    <div class="loader"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Origin!</div>
+                <div class="intro-heading">Check logo for originality.</div>
+                <a href="#upload" class="page-scroll btn btn-xl">Upload Logo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Upload -->
+    <section id="upload">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Upload Logo</h2>
+                    <h3 class="section-subheading text-muted">Click on the image.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-4 upload-item">
+                                    <a href="#" class="upload-link" data-toggle="modal" id="imageUpload">
+                                        <div class="upload-hover">
+                                            <div class="upload-hover-content">
+                                                <i class="fa fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                        <img id="imageUploadChange" src="static/img/logo/image.png" class="img-responsive" alt="">
+                                    </a>
+                                    <div class="btn-group btn-group-justified">
+                                        <div class="btn-group">
+                                            <form id="upload-form" method="post" enctype="multipart/form-data">
+                                                <input onchange="changeImage(this);" name="image" id="inputImage" accept="image/*" type="file" class="hidden">
+                                                <button id="upload-image-btn" type="button" class="page-scroll btn btn-xl black">Search</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4"></div>
+                            </div>
+                    <ul id="ul-0" class="timeline" style="display:none">
+                        <li id="li-0" class="smaller" style="display:none"></li>
+                        <li id="li-1" style="display:none">
+                            <div class="timeline-image">
+                                <img id="img-1" class="img-circle img-responsive" src="" alt="">
+                            </div>
+                            <div class="timeline-image-match upload-item-match">
+                                <a href="#uploadModal1" class="upload-link" data-toggle="modal">
+                                    <div class="upload-hover">
+                                        <div class="upload-hover-content">
+                                            <i class="fa fa-plus fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <img id="img-match-1" class="img-responsive resize-match" src="" alt="">
+                                </a>
+                            </div>
+                            <div class="timeline-panel">
+                                <h4 id="h-1" class="subheading"></h4>
+                                <hr>
+                                <div class="timeline-heading">
+                                    <div id="bar-1" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-1" class="fill"></span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body">
+                                    <p id="p-1" class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="li-2" style="display:none">
+                            <div class="timeline-image">
+                                <img id="img-2" class="img-circle img-responsive" src="" alt="">
+                            </div>
+                            <div class="timeline-image-match upload-item-match">
+                                <a href="#uploadModal2" class="upload-link" data-toggle="modal">
+                                    <div class="upload-hover">
+                                        <div class="upload-hover-content">
+                                            <i class="fa fa-plus fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <img id="img-match-2" class="img-responsive resize-match" src="" alt="">
+                                </a>
+                            </div>
+                            <div class="timeline-panel">
+                                <h4 id="h-2" class="subheading"></h4>
+                                <hr>
+                                <div class="timeline-heading">
+                                    <div id="bar-2" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-2" class="fill"></span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body">
+                                    <p id="p-2" class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="li-3" style="display:none">
+                            <div class="timeline-image">
+                                <img id="img-3" class="img-circle img-responsive" src="" alt="">
+                            </div>
+                            <div class="timeline-image-match upload-item-match">
+                                <a href="#uploadModal3" class="upload-link" data-toggle="modal">
+                                    <div class="upload-hover">
+                                        <div class="upload-hover-content">
+                                            <i class="fa fa-plus fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <img id="img-match-3" class="img-responsive resize-match" src="" alt="">
+                                </a>
+                            </div>
+                            <div class="timeline-panel">
+                                <h4 id="h-3" class="subheading"></h4>
+                                <hr>
+                                <div class="timeline-heading">
+                                    <div id="bar-3" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-3" class="fill"></span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body">
+                                    <p id="p-3" class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="li-4" style="display:none">
+                            <div class="timeline-image">
+                                <img id="img-4" class="img-circle img-responsive" src="" alt="">
+                            </div>
+                            <div class="timeline-image-match upload-item-match">
+                                <a href="#uploadModal4" class="upload-link" data-toggle="modal">
+                                    <div class="upload-hover">
+                                        <div class="upload-hover-content">
+                                            <i class="fa fa-plus fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <img id="img-match-4" class="img-responsive resize-match" src="" alt="">
+                                </a>
+                            </div>
+                            <div class="timeline-panel">
+                                <h4 id="h-4" class="subheading"></h4>
+                                <hr>
+                                <div class="timeline-heading">
+                                    <div id="bar-4" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-4" class="fill"></span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body">
+                                    <p id="p-4" class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="li-5" class="timeline-inverted" style="display:none">
+                            <div class="timeline-image">
+                                <h4 id="h4-similar-logos">These are
+                                    <br>similar
+                                    <br>logos!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+    <!-- Data Set -->
+    <section id="dataset" class="bg-light-gray" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Data Set</h2>
+                    <h3 class="section-subheading text-muted">This dataset contains 56 logos.</h3>
+                </div>
+            </div>
+            {% for i in range(9) %}
+            <div class="row">
+                {% for j in range(12) %}
+                {% if images[i*12+j] %}
+                    <div class="col-sm-1">
+                        <div class="team-member">
+                            <img src="static/img/dataset/{{images[i*12+j]}}/{{images[i*12+j]}}.png" class="img-responsive img-circle" alt="">
+                            <p class="capitalize text-muted">{{images[i*12+j]}}</p>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">This dataset was built from the images on the platorm
+                        <a href="https://worldvectorlogo.com/"> worldvectorlogo</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author -->
+    <section id="author">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Author</h2>
+                    <h3 class="section-subheading text-muted">Faculty of Computer Science<br>
+                    Alexandru Ioan Cuza University of Iași, Romania</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="static/img/images/catalin-melter.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Cătălin Melțer</h4>
+                        <p class="text-muted">Author</p>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="static/img/logo/uaic-fii-sigla.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ionuț Pistol, Lect. Dr.</h4>
+                        <p class="text-muted">Coordinating Teacher</p>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <span class="copyright">Copyright &copy; Origin 2017</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal 1 -->
+    <div class="upload-modal modal fade" id="uploadModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 id="h-modal-1"></h2>
+                                <div class="timeline-heading item-intro text-muted">
+                                    <div id="bar-modal-1" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-modal-1" class="fill"></span>
+                                    </div>
+                                </div>
+                                <img id="img-modal-1" class="img-responsive img-centered" src="" alt="">
+                                <p id="p-modal-1"></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="upload-modal modal fade" id="uploadModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 id="h-modal-2"></h2>
+                                <div class="timeline-heading item-intro text-muted">
+                                    <div id="bar-modal-2" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-modal-2" class="fill"></span>
+                                    </div>
+                                </div>
+                                <img id="img-modal-2" class="img-responsive img-centered" src="" alt="">
+                                <p id="p-modal-2"></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="upload-modal modal fade" id="uploadModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 id="h-modal-3"></h2>
+                                <div class="timeline-heading item-intro text-muted">
+                                    <div id="bar-modal-3" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-modal-3" class="fill"></span>
+                                    </div>
+                                </div>
+                                <img id="img-modal-3" class="img-responsive img-centered" src="" alt="">
+                                <p id="p-modal-3"></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="upload-modal modal fade" id="uploadModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 id="h-modal-4"></h2>
+                                <div class="timeline-heading item-intro text-muted">
+                                    <div id="bar-modal-4" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                        </div>
+                                        <span id="span-modal-4" class="fill"></span>
+                                    </div>
+                                </div>
+                                <img id="img-modal-4" class="img-responsive img-centered" src="" alt="">
+                                <p id="p-modal-4"></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/js/jquery.easing.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="static/js/jqBootstrapValidation.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="static/js/agency.js"></script>
+
+    <!-- Upload Image -->
+    <script src="static/js/upload.js"></script>
+
+    <!-- Barfiller -->
+    <script src="static/js/barfiller.js"></script>
+
+    <script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    });
+    </script>
+
+</body>
+
+</html>
