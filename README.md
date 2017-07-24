@@ -6,7 +6,7 @@ Origin is a web application which identify the originality of a logo using machi
 In the first phase the model is trained. The SURF features of the class images are extracted, and based on them, the visual dictionary is formed (Bag of visual words).
 For each class image, a histogram is generated using the visual dictionary, and based on them, the model is trained using neural network.
 
-The web application can predict with which classes a logo resembles.
+The web application can predict with which classes a logo look alike.
 
 For training the model has been used:
 - Train set: 56 classes with 6 images each
